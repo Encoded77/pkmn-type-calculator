@@ -14,6 +14,7 @@ export type MatchupProps = {
 }
 
 type Matchups = {
+  timesFourDamage: TypeChart['types'][number][];
   timeTwoDamage: TypeChart['types'][number][];
   timeOneDamage: TypeChart['types'][number][];
   halfDamage: TypeChart['types'][number][];
@@ -65,6 +66,9 @@ const getMatchups = (typechart: TypeChart, firstType: string, secondType: string
     damageMap.set(typeName, currentDamage - 1);
   });
 
+  const timesFourDamage = [...damageMap.entries()]
+    .filter(([, damage]) => damage === 3)
+    .map(([typeName]) => indexedTypes[typeName]);
 
   const timeTwoDamage = [...damageMap.entries()]
     .filter(([, damage]) => damage === 2)
@@ -82,7 +86,7 @@ const getMatchups = (typechart: TypeChart, firstType: string, secondType: string
     .filter(([, damage]) => damage === -1)
     .map(([typeName]) => indexedTypes[typeName]);
 
-  return { timeTwoDamage, timeOneDamage, halfDamage, immune };
+  return { timesFourDamage, timeTwoDamage, timeOneDamage, halfDamage, immune };
 };
 
 export const Matchup: FunctionComponent<MatchupProps> = ({
@@ -97,6 +101,13 @@ export const Matchup: FunctionComponent<MatchupProps> = ({
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {matchups.timesFourDamage.length > 0
+        && <Typography.Title level={5} style={{ color: COLORS.TITLE }}>Takes 4x From</Typography.Title>}
+      <ChipList>
+        {matchups.timesFourDamage.map((type) => (
+          <TypeChip key={type} name={type.name} color={type.color} />
+        ))}
+      </ChipList>
       {matchups.timeTwoDamage.length > 0
         && <Typography.Title level={5} style={{ color: COLORS.TITLE }}>Takes 2x From</Typography.Title>}
       <ChipList>
