@@ -23,14 +23,15 @@ export const App = () => {
     <Layout style={{
       paddingTop: 8,
       backgroundColor: COLORS.BACKGROUND,
-      width: '100vw',
-      height: '100vh',
+      paddingBottom: 64,
+      minHeight: '100vh',
+      minWidth: '100vw',
     }}>
       <Row>
         <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
           <Typography.Title style={{ color: COLORS.TITLE }}>Pokemon Type Matchup Calculator</Typography.Title>
         </Col>
-        <Col span={9} offset={2}>
+        <Col span={10} offset={2}>
           <Typography.Title level={5} style={{ color: COLORS.TITLE }}>Choose First Type</Typography.Title>
           <TypesSelector
             typechart={typechart}
@@ -46,7 +47,7 @@ export const App = () => {
             onSelect={setSecondType}
           />
         </Col>
-        <Col span={8} offset={1}>
+        <Col span={8} offset={2}>
           <Matchup typechart={typechart} firstType={firstType} secondType={secondType} />
         </Col>
       </Row>
