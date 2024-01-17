@@ -1,0 +1,152 @@
+{
+  "name": "Pokemon Soulstones 2: Time Wardens",
+  "types": [
+    {
+      "name": "normal",
+      "color": "#bec9d5",
+      "weaknesses": ["fighting", "cosmic"],
+      "resistances": ["fairy"],
+      "immunities": ["ghost"]
+    },
+    {
+      "name": "fire",
+      "color": "#e10000",
+      "weaknesses": ["water", "ground", "rock", "cosmic"],
+      "resistances": ["fire", "grass", "ice", "bug", "steel"],
+      "immunities": []
+    },
+    {
+      "name": "water",
+      "color": "#1900d9",
+      "weaknesses": ["electric", "grass", "sound"],
+      "resistances": ["fire", "water", "ice", "steel"],
+      "immunities": []
+    },
+    {
+      "name": "electric",
+      "color": "#d3d516",
+      "weaknesses": ["ground", "ghost"],
+      "resistances": ["electric", "flying", "steel"],
+      "immunities": []
+    },
+    {
+      "name": "grass",
+      "color": "#0aca12",
+      "weaknesses": ["fire", "ice", "poison", "flying", "bug"],
+      "resistances": ["water", "electric", "grass", "ground", "light"],
+      "immunities": []
+    },
+    {
+      "name": "ice",
+      "color": "#00dbdc",
+      "weaknesses": ["fire", "fighting", "rock", "sound"],
+      "resistances": ["water", "ice", "flying"],
+      "immunities": []
+    },
+    {
+      "name": "fighting",
+      "color": "#910304",
+      "weaknesses": ["flying", "psychic", "fairy"],
+      "resistances": ["rock", "dark"],
+      "immunities": []
+    },
+    {
+      "name": "poison",
+      "color": "#aa00ae",
+      "weaknesses": ["ground", "psychic"],
+      "resistances": ["grass", "fighting", "poison", "fairy"],
+      "immunities": []
+    },
+    {
+      "name": "ground",
+      "color": "#83430b",
+      "weaknesses": ["water", "grass", "ice"],
+      "resistances": ["poison", "rock", "light"],
+      "immunities": ["electric"]
+    },
+    {
+      "name": "flying",
+      "color": "#3e4382",
+      "weaknesses": ["electric", "ice", "rock"],
+      "resistances": ["grass", "fighting", "bug", "sound"],
+      "immunities": ["ground"]
+    },
+    {
+      "name": "psychic",
+      "color": "#e00084",
+      "weaknesses": ["bug", "ghost", "dark", "sound"],
+      "resistances": ["fighting", "psychic", "fairy"],
+      "immunities": []
+    },
+    {
+      "name": "bug",
+      "color": "#007223",
+      "weaknesses": ["fire", "flying", "rock", "sound"],
+      "resistances": ["grass", "ground", "dark"],
+      "immunities": []
+    },
+    {
+      "name": "rock",
+      "color": "#a77f4a",
+      "weaknesses": ["water", "grass", "fighting", "ground", "steel"],
+      "resistances": ["normal", "fire", "electric", "poison", "flying", "cosmic", "light"],
+      "immunities": []
+    },
+    {
+      "name": "ghost",
+      "color": "#432071",
+      "weaknesses": ["ghost", "dark", "light"],
+      "resistances": ["poison", "sound"],
+      "immunities": ["normal", "fighting"]
+    },
+    {
+      "name": "dragon",
+      "color": "#2b06a6",
+      "weaknesses": ["ice", "dragon", "fairy", "light"],
+      "resistances": ["water", "electric", "grass", "cosmic"],
+      "immunities": []
+    },
+    {
+      "name": "dark",
+      "color": "#171618",
+      "weaknesses": ["fighting", "bug", "fairy", "light"],
+      "resistances": ["ghost", "dark"],
+      "immunities": ["psychic"]
+    },
+    {
+      "name": "steel",
+      "color": "#a6a6a6",
+      "weaknesses": ["fire", "electric", "fighting", "ground", "cosmic"],
+      "resistances": ["normal", "grass", "ice", "flying", "bug", "rock", "steel", "fairy", "light"],
+      "immunities": ["poison"]
+    },
+    {
+      "name": "fairy",
+      "color": "#eb66da",
+      "weaknesses": ["normal", "poison", "steel"],
+      "resistances": ["fighting", "bug", "dark", "sound"],
+      "immunities": ["dragon"]
+    },
+    {
+      "name": "cosmic",
+      "color": "#180023",
+      "weaknesses": ["rock", "dragon", "dark", "light"],
+      "resistances": ["fire", "fighting", "flying", "steel", "cosmic"],
+      "immunities": ["ground", "sound"]
+    },
+    {
+      "name": "sound",
+      "color": "#00b7ad",
+      "weaknesses": ["flying", "steel", "fairy"],
+      "resistances": ["water", "bug", "rock", "sound"],
+      "immunities": []
+    },
+    {
+      "name": "light",
+      "color": "#f9e39d",
+      "weaknesses": ["grass", "poison", "psychic", "dark"],
+      "resistances": ["electric", "ghost", "dragon", "cosmic", "light"],
+      "immunities": []
+    }
+  ]
+}

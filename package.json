@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.13.1",
+    "normalize.css": "^8.0.1",
     "preact": "^10.19.3"
   },
   "devDependencies": {
