@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { Flex } from 'antd';
 
-import { COLORS } from '../constants';
+import { CHIP_HEIGHT, COLORS } from '../constants';
 import { shadeColor } from '../lib/color';
 
 export type TypeChipProps = {
@@ -19,10 +19,10 @@ export const TypeChip: FunctionComponent<TypeChipProps> = ({
       justifyContent: 'center',
       alignItems: 'center',
       width: '110px',
-      height: '26px',
+      height: `${CHIP_HEIGHT}px`,
       borderRadius: '8px',
       backgroundColor: color,
-      border: `4px solid ${shadeColor(color, 10)}`,
+      border: `3px solid ${shadeColor(color, 30)}`,
       color: COLORS.TEXT,
       fontWeight: 'bold',
       textShadow: '0px 0px 6px #000000',

@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'preact';
 import { Button } from 'antd';
 
-import { COLORS } from '../constants';
+import { CHIP_HEIGHT, COLORS } from '../constants';
 
 export type TypeButtonProps = {
   name: string;
@@ -20,12 +20,12 @@ export const TypeButton: FunctionComponent<TypeButtonProps> = ({
 }) => {
   const baseButtonStyles = {
     backgroundColor: disabled ? COLORS.BACKGROUND : COLORS.LIGHT_BACKGROUND,
-    borderColor: COLORS.BORDER,
-    color: COLORS.TEXT,
+    borderColor: disabled ? COLORS.BACKGROUND : COLORS.BORDER,
+    color: disabled ? COLORS.DISABLED_TEXT : COLORS.TEXT,
     fontWeight: 'bold',
     position: 'relative',
     width: '125px',
-    height: '40px',
+    height: `${CHIP_HEIGHT}px`,
     borderRadius: '8px',
   };
 
@@ -49,7 +49,7 @@ export const TypeButton: FunctionComponent<TypeButtonProps> = ({
         style={{
           position: 'absolute',
           borderRadius: 500,
-          top: 11,
+          top: 7,
           left: 8,
           width: 16,
           height: 16,

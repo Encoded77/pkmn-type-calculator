@@ -11,9 +11,17 @@ export const App = () => {
   const [firstType, setFirstType] = useState(typechart?.types?.[0]?.name || EMPTY_TYPE);
   const [secondType, setSecondType] = useState(EMPTY_TYPE);
 
+  const handleFirstTypeSelect = (type: string) => {
+    if (type === secondType) {
+      setSecondType(EMPTY_TYPE);
+    }
+
+    setFirstType(type);
+  }
+
   return (
     <Layout style={{
-      paddingTop: 16,
+      paddingTop: 8,
       backgroundColor: COLORS.BACKGROUND,
       width: '100vw',
       height: '100vh',
@@ -22,13 +30,12 @@ export const App = () => {
         <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
           <Typography.Title style={{ color: COLORS.TITLE }}>Pokemon Type Matchup Calculator</Typography.Title>
         </Col>
-        <Col span={8} offset={2}>
+        <Col span={9} offset={2}>
           <Typography.Title level={5} style={{ color: COLORS.TITLE }}>Choose First Type</Typography.Title>
           <TypesSelector
             typechart={typechart}
             selectedType={firstType}
-            disabledTypes={[secondType]}
-            onSelect={setFirstType}
+            onSelect={handleFirstTypeSelect}
           />
           <Typography.Title level={5} style={{ color: COLORS.TITLE }}>Choose Second Type</Typography.Title>
           <TypesSelector
@@ -39,7 +46,7 @@ export const App = () => {
             onSelect={setSecondType}
           />
         </Col>
-        <Col span={8} offset={2}>
+        <Col span={8} offset={1}>
           <Matchup typechart={typechart} firstType={firstType} secondType={secondType} />
         </Col>
       </Row>
